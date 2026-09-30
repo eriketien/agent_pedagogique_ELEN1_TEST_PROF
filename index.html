@@ -2253,7 +2253,7 @@ function aopSvg(o){
     W([[40,yP],[xL,yP]]);src(40,yP,'V','e');
     W([[xL,yM],[122,yM]]);dot(122,yM);W([[122,yM],[100,yM]]);rV(100,yM,196,'R1');gnd(100,196);
     W([[xo,yO],[xo,178]]);rH(xo,122,178,'R2');W([[122,178],[122,yM]]);return svg;}
-  if(t==='comp'){const yU=Math.min(yT,yB),yD=Math.max(yT,yB),lu=o.swap?['V','ref']:['V','e'],ld=o.swap?['V','e']:['V','ref'];
+  if(t==='comp'){const yU=Math.min(yT,yB),yD=Math.max(yT,yB),lp=o.swap?['V','ref']:['V','e'],lm=o.swap?['V','e']:['V','ref'],lu=yU===yP?lp:lm,ld=yD===yP?lp:lm; /* V_e sur e⁺ (ou sur e⁻ si swap), quelle que soit la disposition */
     W([[40,yU],[xL,yU]]);src(40,yU,lu[0],lu[1]);W([[92,yD],[xL,yD]]);src(92,yD,ld[0],ld[1]);return svg;}
   if(t==='trig'){ /* rebouclage sur e+ (en haut), e− à la masse */
     rH(40,122,yP,'R1');src(40,yP,'V','e');dot(122,yP);W([[122,yP],[xL,yP]]);
